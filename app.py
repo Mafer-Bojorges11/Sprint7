@@ -12,3 +12,10 @@ if hist_button:
         'Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
     fig = px.histogram(car_data, x="odometer")
     st.plotly_chart(fig, use_container_width=True)
+
+scatter_button = st.button('Construir gráfico de dispersión')
+
+if scatter_button:
+    st.write('Creación de un gráfica de dispersión para el conjunto de datos de anuncios de venta de coches')
+    fig_2 = px.scatter(car_data, x="odometer", y="price")
+    st.plotly_chart(fig_2, use_container_width=True)
